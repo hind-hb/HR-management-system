@@ -18,7 +18,7 @@ function senior(min = 1500, max=2000) {
    s= s-s*0.075;
   return ;
   
-  }a
+  }
   
 function midSenior(min = 1000, max=1500) {
   let s = Math.floor(Math.random()*(max-min)) +min;
