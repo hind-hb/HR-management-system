@@ -49,12 +49,20 @@ for (let i=0;i<arr.length;i++)
 Employee.prototype.render=function(){
   
   let mysection = document.getElementById('employee');
- // let divE1 = document.createElement('div');
- // mysection.appendChild(divE1);
-
- // let h4E1 = document.createElement('h4');
- // divE1.appendChild(h4E1);
- // h4E1.textContent=this.FullName;
+   
+   let divEl = document.createElement('div');
+         mySection.appendChild(divEl)
+         let p1E1 = document.createElement('name');
+             divEl.appendChild(p1E1);
+             p1E1.textContent = this.name;
+        let seE1 = document.createElement("option");
+            divEl.appendChild(seE1);
+            seE1.setAttribute = this.Department;
+        let imgEl = document.createElement('img');
+            divEl.appendChild(imgEl);
+            imgEl.setAttribute('src',employee.imagePath);
+            imgEl.setAttribute('alt',employee.name);
+ 
   document.write(`<p>${this.EmployeeID} ${this.FullName} ${this.Department} ${this.Level} </p>`)
   
 }
