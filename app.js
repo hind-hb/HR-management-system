@@ -41,12 +41,33 @@ function midSenior(min = 1000, max=1500) {
   const emp6 = new Employee('1005','Rana Saleh','Development','junior',junior(),Image,'Salary')
   const emp7 = new Employee('1006','Hadi Ahmad','Finance','Mid-Senior',midSenior(),Image,'Salary')
 console.log(arr);
+
+var EmployeeId = Math.floor(1000 + Math.random() * 9000);
+console.log(EmployeeId);
 for (let i=0;i<arr.length;i++)
 {
 Employee.prototype.render=function(){
-    document.write(`<p>${this.EmployeeID} ${this.FullName} ${this.Department} ${this.Level} </p>`)
+  
+  let mysection = document.getElementById('employee');
+ // let divE1 = document.createElement('div');
+ // mysection.appendChild(divE1);
+
+ // let h4E1 = document.createElement('h4');
+ // divE1.appendChild(h4E1);
+ // h4E1.textContent=this.FullName;
+  document.write(`<p>${this.EmployeeID} ${this.FullName} ${this.Department} ${this.Level} </p>`)
+  
 }
 arr[i].render();}
+
+ function addEmp(event){
+  event.preventDefault();
+  Employee.push([EmployeeId(),name.value,Department.value,Level.value,Image.value]);
+ }
+ const form = document.getElementById('employee');
+ form.addEventListener('submit',addEmp);
+
+
 
 
 
